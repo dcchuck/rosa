@@ -79,9 +79,10 @@ background-size: 1800% 1800%;
             const coolnessResults = document.getElementById('coolness-results');
 
             submitCool.onclick = () => {
-                if (coolerInput.value === 'kimmy') {
+                const check = coolerInput.value.toLowerCase();
+                if (check === 'kimmy') {
                     coolnessResults.innerText = 'Correct! Kimmy is the coolest!'
-                } else if (coolerInput.value === 'dillon') {
+                } else if (check === 'dillon') {
                     coolnessResults.innerText = 'Good guess but try again!'
                 } else {
                     coolnessResults.innerText = 'WRONG!'
