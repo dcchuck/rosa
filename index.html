@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TEMPLATE</title>
+        <style>
+            body {
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Rosa and Dillon's Website</h1>
+        <input type='text' id='who-is-coolest'>
+        <button id='submit-coolness'>Check Coolness</button>
+        <div id='coolness-results'></div>
+        <img src='team-picture.JPG'>
+        <script>
+            const coolerInput = document.getElementById('who-is-coolest');
+            const submitCool = document.getElementById('submit-coolness');
+            const coolnessResults = document.getElementById('coolness-results');
+
+            submitCool.onclick = () => {
+                if (coolerInput.value === 'kimmy') {
+                    coolnessResults.innerText = 'Correct! Kimmy is the coolest!'
+                } else if (coolerInput.value === 'dillon') {
+                    coolnessResults.innerText = 'Good guess but try again!'
+                } else {
+                    coolnessResults.innerText = 'WRONG!'
+                }
+            }
+        </script>
+    </body>
+</html>
